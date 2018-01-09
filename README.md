@@ -1,2 +1,2 @@
-# usaco
+# USACO
 USA Computing Olympiad
