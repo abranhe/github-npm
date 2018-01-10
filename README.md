@@ -2,4 +2,4 @@
 
 [USACO website](http://www.usaco.org/)
 
-USA Computing Olympiad
+>USA Computing Olympiad
