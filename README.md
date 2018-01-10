@@ -1,5 +1,5 @@
 # USACO
 
-[](http://www.usaco.org/)
+[USACO website](http://www.usaco.org/)
 
 USA Computing Olympiad
