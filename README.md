@@ -1,4 +1,4 @@
-# USA Computing Olympiad
+# (USACO) USA Computing Olympiad
 
 [USACO website](http://www.usaco.org/)
 
