@@ -3,5 +3,4 @@
 [USACO website](http://www.usaco.org/)
 
 
-0
 1
