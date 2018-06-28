@@ -19,5 +19,6 @@ echo $PACKAGE_VERSION
 git add .
 git commit -m "Release $PACKAGE_VERSION published"
 git push origin master
+git tag -a $PACKAGE_VERSION 
 git push origin --tags
 npm publish
