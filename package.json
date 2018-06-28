@@ -1,0 +1,24 @@
+{
+  "name": "github-npm",
+  "version": "0.0.2",
+  "description": "Release npm packages on Github",
+  "main": "release.sh",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/19cah/github-npm.git"
+  },
+  "keywords": [
+    "realease",
+    "npm-publish",
+    "github-release"
+  ],
+  "author": "Carlos Abraham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/19cah/github-npm/issues"
+  },
+  "homepage": "https://github.com/19cah/github-npm#readme"
+}
