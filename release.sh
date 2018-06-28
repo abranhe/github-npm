@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
+#
+# MIT (c) 2018 Carlos Abraham Hernandez
+#
+# release.sh
+#
+# Easy way to release npm packages on Github
+# Issues: https://github.com/19cah/github-npm/issues
+
 
 if ([ "$1" != "major" ] && [ "$1" != "minor" ] && [ "$1" != "patch" ])
   then
