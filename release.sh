@@ -8,19 +8,30 @@ fi
 
 git checkout master
 git add .
-git commit --amend --no-edit
+git commit --amend
+
 npm install
 npm version $1
-# Version key/value should be on his own line
+
+# Getting package version
 PACKAGE_VERSION=$(cat package.json \
   | grep version \
   | head -1 \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g')
+
 echo $PACKAGE_VERSION
+
+# Add all
 git add .
 git commit -m "$PACKAGE_VERSION published"
-git push origin master
+
+# Publish package
 npm publish
-git tag -a $PACKAGE_VERSION -m  "$PACKAGE_VERSION published"
+
+# Push commits
+git push origin master
+
+# Tag version
+git tag -a $PACKAGE_VERSION -m  "Welcome to $PACKAGE_VERSION version"
 git push origin --tags
