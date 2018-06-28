@@ -15,7 +15,6 @@ PACKAGE_VERSION=$(cat package.json \
   | head -1 \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g')
-
 echo $PACKAGE_VERSION
 git add .
 git commit -m 'Release $PACKAGE_VERSION published'
