@@ -9,6 +9,7 @@ fi
 git checkout master
 npm install
 npm version $1
+git add .
 # Version key/value should be on his own line
 PACKAGE_VERSION=$(cat package.json \
   | grep version \
@@ -16,9 +17,8 @@ PACKAGE_VERSION=$(cat package.json \
   | awk -F: '{ print $2 }' \
   | sed 's/[",]//g')
 echo $PACKAGE_VERSION
-git add .
-git commit -m "Release $PACKAGE_VERSION published"
+git commit -m "$PACKAGE_VERSION published"
 git push origin master
-git tag -a $PACKAGE_VERSION 
-git push origin --tags
 npm publish
+git tag -a $PACKAGE_VERSION -m  "$PACKAGE_VERSION published"
+git push origin --tags
