@@ -8,7 +8,7 @@ fi
 
 git checkout master
 git add .
-git commit --allow-empty-message -m ''
+git commit -m 'Save all to publish package'
 
 npm install
 npm version $1
