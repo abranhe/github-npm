@@ -8,7 +8,7 @@ fi
 
 git checkout master
 git add .
-# git commit -m "clear woking dir to npm publish"
+git commit --amend --no-edit
 npm install
 npm version $1
 # Version key/value should be on his own line
