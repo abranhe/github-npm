@@ -8,6 +8,7 @@ fi
 
 git checkout master
 git add .
+git commit -m "clear woking dir to npm publish"
 npm install
 npm version $1
 # Version key/value should be on his own line
@@ -18,8 +19,8 @@ PACKAGE_VERSION=$(cat package.json \
   | sed 's/[",]//g')
 echo $PACKAGE_VERSION
 git add .
-git commit -m "$PACKAGE_VERSION published"
-git push origin master
-npm publish
-git tag -a $PACKAGE_VERSION -m  "$PACKAGE_VERSION published"
-git push origin --tags
+# git commit -m "$PACKAGE_VERSION published"
+# git push origin master
+# npm publish
+# git tag -a $PACKAGE_VERSION -m  "$PACKAGE_VERSION published"
+# git push origin --tags
