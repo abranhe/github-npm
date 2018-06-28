@@ -5,7 +5,7 @@
 ## Know me using command line
 
 [![19cah](https://19cah.com/badge.svg)](https://github.com/19cah)
-[![Support me on Patreon][cash-me]](https://cash.me/$19cah)
+[![Cash Me][cash-me]](https://cash.me/$19cah)
 [![npm](https://img.shields.io/npm/v/github-npm.svg)](https://www.npmjs.com/package/github-npm)
 [![license](https://img.shields.io/github/license/19cah/github-npm.svg)](https://github.com/19cah/github-npm/blob/master/LICENSE)
 
