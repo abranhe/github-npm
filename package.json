@@ -1,6 +1,10 @@
 {
   "name": "github-npm",
+<<<<<<< HEAD
   "version": "0.2.1",
+=======
+  "version": "0.2.0",
+>>>>>>> 4f7e44f1ff8cfad6023f7ed70d3ab8e6cd7aa0ae
   "description": "Release npm packages on Github",
   "main": "release.sh",
   "scripts": {

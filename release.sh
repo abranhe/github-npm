@@ -8,7 +8,7 @@ fi
 
 git checkout master
 git add .
-git commit --amend
+git commit --allow-empty-message -m ''
 
 npm install
 npm version $1
