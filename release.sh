@@ -7,11 +7,20 @@ if ([ "$1" != "major" ] && [ "$1" != "minor" ] && [ "$1" != "patch" ])
 fi
 
 git checkout master
-npm install
-npm version $1
-VERSION=`cat package.json | version`
+# npm install
+# npm version $1
+
+# Version key/value should be on his own line
+PACKAGE_VERSION=$(cat package.json \
+  | grep version \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g')
+
+echo $PACKAGE_VERSION
+
 git add .
-git commit -m 'New Release'
+git commit -m 'Release $PACKAGE_VERSION published' 
 git push origin master
 git push origin --tags
-npm publish
+# npm publish
