@@ -36,7 +36,7 @@ if [[ ! " ${COMMANDS[@]} " =~ " ${first} " ]]; then
 fi
 
 # When user ask for help
-if [[ " ${COMMANDS[0]} " =~ " ${first} " ]] || [[ " ${COMMANDS[1]} " =~ " ${first} " ]]; then
+if [[ " ${COMMANDS[0]} " =~ " ${first} " ]] || [[ " ${COMMANDS[1]} " =~ " ${first} " ]] || [ $# -eq 0 ]; then
 	echo -e "$(help)"
 fi
 
