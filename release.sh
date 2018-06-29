@@ -36,7 +36,16 @@ fi
 
 # If user enter verson command
 if [[ " ${COMMANDS[2]} " =~ " ${first} " ]] || [[ " ${COMMANDS[3]} " =~ " ${first} " ]] || [[ " ${COMMANDS[4]} " =~ " ${first} " ]]; then
-    echo "${first}"
+
+	# TODO
+	case ${first} in
+		${COMMANDS[2]})
+			echo "this is major" ;;
+		${COMMANDS[3]})
+			echo "this is minor " ;;
+		${COMMANDS[4]})
+			echo "this is patch " ;;
+esac
 fi
 
 
