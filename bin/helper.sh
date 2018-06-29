@@ -23,6 +23,7 @@ WHITE="\033[1;37m"
 RED='\033[0;31m'
 DARKRED="\033[1;31m"
 
+# Help Fuction
 function help()
 {
 	echo -e "
@@ -36,4 +37,22 @@ ${PINK}Where${RESET} command is:
 	--tag  <tag>      custom tag value
 	--version         package version
 "
+}
+
+# Getting package version
+PACKAGE_VERSION=$(cat package.json\
+		| grep version\
+		| head -1 \
+		| awk -F: '{ print $2 }' \
+	  | sed 's/[",]//g')
+
+
+function checkStatus() {
+	if [ -n "$(git status --porcelain)" ]; then
+	  # echo "there are changes";
+		return 1;
+	else
+	  # echo "no changes";
+		return 0;
+	fi
 }

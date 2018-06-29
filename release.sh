@@ -7,9 +7,14 @@
 # Easy way to release npm packages on Github
 # Issues: https://github.com/19cah/github-npm/issues
 
-
 # Helper
 source "bin/helper.sh"
+
+# Check if there are changes to be committed
+if ! $(checkStatus); then
+	echo -e "${RED}Please commit your changes before creating a release${RESET}"
+	exit 0
+fi
 
 # Commands
 COMMANDS=(
@@ -20,6 +25,7 @@ COMMANDS=(
 	"patch"
 	"--tag"
 	"-m"
+	"--version"
 )
 
 # Check for invalid arguments
@@ -48,17 +54,20 @@ if [[ " ${COMMANDS[2]} " =~ " ${first} " ]] || [[ " ${COMMANDS[3]} " =~ " ${firs
 esac
 fi
 
+# When user ask for help
+if [[ " ${COMMANDS[7]} " =~ " ${first} " ]]; then
+	echo "$PACKAGE_VERSION"
+fi
 
-# Ask user
-# read -p "read line  " read
-# echo "${read}"
+
 
 # if ([ "$1" != "major" ] && [ "$1" != "minor" ] && [ "$1" != "patch" ])
 #   then
 #     echo "please specify one of (major, minor, patch)"
 #     exit
 # fi
-#
+
+
 # git checkout master
 # git add .
 # git commit -m 'Save all to publish package'
@@ -66,12 +75,8 @@ fi
 # npm install
 # npm version $1
 #
-# # Getting package version
-# PACKAGE_VERSION=$(cat package.json \
-#   | grep version \
-#   | head -1 \
-#   | awk -F: '{ print $2 }' \
-#   | sed 's/[",]//g')
+
+
 #
 # echo $PACKAGE_VERSION
 #
@@ -88,3 +93,8 @@ fi
 # # Tag version
 # git tag -a "v$PACKAGE_VERSION" -m  "Welcome to $PACKAGE_VERSION version"
 # git push origin --tags
+
+
+# Ask user
+# read -p "read line  " read
+# echo "${read}"

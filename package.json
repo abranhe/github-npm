@@ -16,7 +16,8 @@
     "github-release"
   ],
   "bin": {
-    "github-npm": "./release.sh"
+    "github-npm": "./release.sh",
+		"gn": "./release.sh"
   },
   "author": "Carlos Abraham",
   "license": "MIT",
