@@ -13,13 +13,13 @@ source "bin/helper.sh"
 
 # Commands
 COMMANDS=(
-    help    #0
-		-h   	  #1
-		major   #2
-		minor		#3
-		patch		#4
-		--tag   #5
-		-m			#6
+	"help"
+	"-h"
+	"major"
+	"minor"
+	"patch"
+	"--tag"
+	"-m"
 )
 
 # Check for invalid arguments
@@ -30,16 +30,14 @@ if [[ ! " ${COMMANDS[@]} " =~ " ${first} " ]]; then
 fi
 
 # When user ask for help
-if (( " ${COMMANDS[0]} " == "${first}" )) ||  (( " ${COMMANDS[1]} " == "${first}" )); then
+if [[ " ${COMMANDS[0]} " =~ " ${first} " ]] || [[ " ${COMMANDS[1]} " =~ " ${first} " ]]; then
 	echo -e "$(help)"
-else
-	echo "no se q pasa "
 fi
 
-# # If user enter verson command
-# if (( " ${COMMANDS[2]} " =~ "${first}" )) ||  (( " ${COMMANDS[3]} " =~ "${first}" )) || (( " ${COMMANDS[4]} " =~ "${first}" )); then
-#     echo "${first}"
-# fi
+# If user enter verson command
+if [[ " ${COMMANDS[2]} " =~ " ${first} " ]] || [[ " ${COMMANDS[3]} " =~ " ${first} " ]] || [[ " ${COMMANDS[4]} " =~ " ${first} " ]]; then
+    echo "${first}"
+fi
 
 
 # Ask user
