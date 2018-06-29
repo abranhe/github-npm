@@ -22,6 +22,20 @@ BLUE="\033[01;34m"
 WHITE="\033[1;37m"
 RED='\033[0;31m'
 DARKRED="\033[1;31m"
+YELLOW="\033[0;33m"
+BYELLOW="\033[1;33m"
+IYELLOW="\033[0;93m"
+BIYELLOW="\033[1;93m"
+IRED="\033[0;91m"
+BRed='\033[1;31m'
+
+
+red="\033[38;5;160m"
+red1="\033[38;5;161m"
+red2="\033[38;5;162m"
+red3="\033[38;5;163m"
+red4="\033[38;5;164m"
+red5="\033[38;5;165m"
 
 # Help Fuction
 function help()
@@ -46,13 +60,35 @@ PACKAGE_VERSION=$(cat package.json\
 		| awk -F: '{ print $2 }' \
 	  | sed 's/[",]//g')
 
-
+# Check git status
 function checkStatus() {
 	if [ -n "$(git status --porcelain)" ]; then
-	  # echo "there are changes";
+	  # if there are changes
 		return 1;
 	else
-	  # echo "no changes";
+	  # if there not changes
 		return 0;
 	fi
+}
+
+# GITHUB-NPM
+function logo() {
+
+echo "${red5}          \$\$\   \$\$\     \$\$\                 \$\$\                                                                                                 ${RESET}"
+echo "${red4}          \__|  \$\$ |    \$\$ |                \$\$ |                                                                                                  ${RESET}"
+echo "${red4} \$\$\$\$\$\$\  \$\$\ \$\$\$\$\$\$\   \$\$\$\$\$\$\$\  \$\$\   \$\$\ \$\$\$\$\$\$\$\          \$\$\$\$\$\$\$\   \$\$\$\$\$\$\  \$\$\$\$\$\$\\\$\$\$\$\  ${RESET}"
+echo "${red3}\$\$  __\$\$\ \$\$ |\_\$\$  _|  \$\$  __\$\$\ \$\$ |  \$\$ |\$\$  __\$\$\ \$\$\$\$\$\$\ \$\$  __\$\$\ \$\$  __\$\$\ \$\$  _\$\$  _\$\$\                 ${RESET}"
+echo "${red3}\$\$ /  \$\$ |\$\$ |  \$\$ |    \$\$ |  \$\$ |\$\$ |  \$\$ |\$\$ |  \$\$ |\______|\$\$ |  \$\$ |\$\$ /  \$\$ |\$\$ / \$\$ / \$\$ |                      ${RESET}"
+echo "${red2}\$\$ |  \$\$ |\$\$ |  \$\$ |\$\$\ \$\$ |  \$\$ |\$\$ |  \$\$ |\$\$ |  \$\$ |        \$\$ |  \$\$ |\$\$ |  \$\$ |\$\$ | \$\$ | \$\$ |                    ${RESET}"
+echo "${red2}\\$\$\$\$\$\$\$ |\$\$ |  \\\$\$\$\$  |\$\$ |  \$\$ |\\\$\$\$\$\$\$  |\$\$\$\$\$\$\$  |        \$\$ |  \$\$ |\$\$\$\$\$\$\$  |\$\$ | \$\$ | \$\$ |       ${RESET}"
+echo "${red1} \____\$\$ |\__|   \____/ \__|  \__| \______/ \_______/         \__|  \__|\$\$  ____/ \__| \__| \__|                                                    ${RESET}"
+echo "${red1}\$\$\   \$\$ |                                                              \$\$ |                                                                      ${RESET}"
+echo "${red}\\\$\$\$\$\$\$  |                                                              \$\$ |                                                                   ${RESET}"
+echo "${red} \______/                                                               \__|                                                                            ${RESET}"
+echo "
+${PINK}Usage${RESET}:
+	${PINK}${REVERSE}$ npx github-npm <command...>${RESET}\n
+${PINK}or${RESET}:
+	${PINK}${REVERSE}$ github-npm <command...>${RESET}\n
+${WHITE}See 'github-npm help' for more information${RESET}"
 }

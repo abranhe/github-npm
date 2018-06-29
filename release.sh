@@ -11,10 +11,11 @@
 source "bin/helper.sh"
 
 # Check if there are changes to be committed
-if ! $(checkStatus); then
-	echo -e "${RED}Please commit your changes before creating a release${RESET}"
-	exit 0
-fi
+# if ! $(checkStatus); then
+# 	echo -e "${RED}Please commit your changes before creating a release${RESET}"
+# 	exit 0
+# fi
+
 
 # Commands
 COMMANDS=(
@@ -28,6 +29,12 @@ COMMANDS=(
 	"--version"
 )
 
+# Non argument statement
+if [ $# -eq 0 ]; then
+    echo -e "$(logo)"
+    exit 1
+fi
+
 # Check for invalid arguments
 if [[ ! " ${COMMANDS[@]} " =~ " ${first} " ]]; then
     echo -e "${RED}github-npm: '${first}' is not a valid command. ${RESET}" # "$(test ! -z " $all" -a "$all" != " " && echo "\nParameters: $all" || echo "") ${RESET}"
@@ -36,7 +43,7 @@ if [[ ! " ${COMMANDS[@]} " =~ " ${first} " ]]; then
 fi
 
 # When user ask for help
-if [[ " ${COMMANDS[0]} " =~ " ${first} " ]] || [[ " ${COMMANDS[1]} " =~ " ${first} " ]] || [ $# -eq 0 ]; then
+if [[ " ${COMMANDS[0]} " =~ " ${first} " ]] || [[ " ${COMMANDS[1]} " =~ " ${first} " ]]; then
 	echo -e "$(help)"
 fi
 
