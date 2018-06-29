@@ -30,12 +30,12 @@ IRED="\033[0;91m"
 BRed='\033[1;31m'
 
 
-red="\033[38;5;160m"
-red1="\033[38;5;161m"
-red2="\033[38;5;162m"
-red3="\033[38;5;163m"
-red4="\033[38;5;164m"
-red5="\033[38;5;165m"
+LOGO="\033[38;5;160m"
+LOGO1="\033[38;5;161m"
+LOGO2="\033[38;5;162m"
+LOGO3="\033[38;5;163m"
+LOGO4="\033[38;5;164m"
+LOGO5="\033[38;5;165m"
 
 # Help Fuction
 function help()
@@ -45,11 +45,11 @@ ${PINK}Usage${RESET}:
 	${PINK}${REVERSE}$ npx github-npm <command...>${RESET}
 
 ${PINK}Where${RESET} command is:
-	${WHITE}-h  help          show help${RESET}
+	${GREEN}-h  help${RESET}          show help
 	${GREEN}<version>${RESET}         avilable [<major>,<minor>, <patch>]
-	-m  <message>     custom message
-	--tag  <tag>      custom tag value
-	--version         package version
+	${GREEN}-m  <message>${RESET}     custom message
+	${GREEN}--tag  <tag>${RESET}      custom tag value
+	${GREEN}--version${RESET}         package version
 "
 }
 
@@ -74,21 +74,27 @@ function checkStatus() {
 # GITHUB-NPM
 function logo() {
 
-echo "${red5}          \$\$\   \$\$\     \$\$\                 \$\$\                                                                                                 ${RESET}"
-echo "${red4}          \__|  \$\$ |    \$\$ |                \$\$ |                                                                                                  ${RESET}"
-echo "${red4} \$\$\$\$\$\$\  \$\$\ \$\$\$\$\$\$\   \$\$\$\$\$\$\$\  \$\$\   \$\$\ \$\$\$\$\$\$\$\          \$\$\$\$\$\$\$\   \$\$\$\$\$\$\  \$\$\$\$\$\$\\\$\$\$\$\  ${RESET}"
-echo "${red3}\$\$  __\$\$\ \$\$ |\_\$\$  _|  \$\$  __\$\$\ \$\$ |  \$\$ |\$\$  __\$\$\ \$\$\$\$\$\$\ \$\$  __\$\$\ \$\$  __\$\$\ \$\$  _\$\$  _\$\$\                 ${RESET}"
-echo "${red3}\$\$ /  \$\$ |\$\$ |  \$\$ |    \$\$ |  \$\$ |\$\$ |  \$\$ |\$\$ |  \$\$ |\______|\$\$ |  \$\$ |\$\$ /  \$\$ |\$\$ / \$\$ / \$\$ |                      ${RESET}"
-echo "${red2}\$\$ |  \$\$ |\$\$ |  \$\$ |\$\$\ \$\$ |  \$\$ |\$\$ |  \$\$ |\$\$ |  \$\$ |        \$\$ |  \$\$ |\$\$ |  \$\$ |\$\$ | \$\$ | \$\$ |                    ${RESET}"
-echo "${red2}\\$\$\$\$\$\$\$ |\$\$ |  \\\$\$\$\$  |\$\$ |  \$\$ |\\\$\$\$\$\$\$  |\$\$\$\$\$\$\$  |        \$\$ |  \$\$ |\$\$\$\$\$\$\$  |\$\$ | \$\$ | \$\$ |       ${RESET}"
-echo "${red1} \____\$\$ |\__|   \____/ \__|  \__| \______/ \_______/         \__|  \__|\$\$  ____/ \__| \__| \__|                                                    ${RESET}"
-echo "${red1}\$\$\   \$\$ |                                                              \$\$ |                                                                      ${RESET}"
-echo "${red}\\\$\$\$\$\$\$  |                                                              \$\$ |                                                                   ${RESET}"
-echo "${red} \______/                                                               \__|                                                                            ${RESET}"
+echo "${LOGO5}          \$\$\   \$\$\     \$\$\                 \$\$\                                                                                                 ${RESET}"
+echo "${LOGO4}          \__|  \$\$ |    \$\$ |                \$\$ |                                                                                                  ${RESET}"
+echo "${LOGO4} \$\$\$\$\$\$\  \$\$\ \$\$\$\$\$\$\   \$\$\$\$\$\$\$\  \$\$\   \$\$\ \$\$\$\$\$\$\$\          \$\$\$\$\$\$\$\   \$\$\$\$\$\$\  \$\$\$\$\$\$\\\$\$\$\$\  ${RESET}"
+echo "${LOGO3}\$\$  __\$\$\ \$\$ |\_\$\$  _|  \$\$  __\$\$\ \$\$ |  \$\$ |\$\$  __\$\$\ \$\$\$\$\$\$\ \$\$  __\$\$\ \$\$  __\$\$\ \$\$  _\$\$  _\$\$\                 ${RESET}"
+echo "${LOGO3}\$\$ /  \$\$ |\$\$ |  \$\$ |    \$\$ |  \$\$ |\$\$ |  \$\$ |\$\$ |  \$\$ |\______|\$\$ |  \$\$ |\$\$ /  \$\$ |\$\$ / \$\$ / \$\$ |                      ${RESET}"
+echo "${LOGO2}\$\$ |  \$\$ |\$\$ |  \$\$ |\$\$\ \$\$ |  \$\$ |\$\$ |  \$\$ |\$\$ |  \$\$ |        \$\$ |  \$\$ |\$\$ |  \$\$ |\$\$ | \$\$ | \$\$ |                    ${RESET}"
+echo "${LOGO2}\\$\$\$\$\$\$\$ |\$\$ |  \\\$\$\$\$  |\$\$ |  \$\$ |\\\$\$\$\$\$\$  |\$\$\$\$\$\$\$  |        \$\$ |  \$\$ |\$\$\$\$\$\$\$  |\$\$ | \$\$ | \$\$ |       ${RESET}"
+echo "${LOGO1} \____\$\$ |\__|   \____/ \__|  \__| \______/ \_______/         \__|  \__|\$\$  ____/ \__| \__| \__|                                                    ${RESET}"
+echo "${LOGO1}\$\$\   \$\$ |                                                              \$\$ |                                                                      ${RESET}"
+echo "${LOGO}\\\$\$\$\$\$\$  |                                                              \$\$ |                                                                    ${RESET}"
+echo "${LOGO} \______/                                                               \__|                                                                             ${RESET}"
 echo "
 ${PINK}Usage${RESET}:
 	${PINK}${REVERSE}$ npx github-npm <command...>${RESET}\n
 ${PINK}or${RESET}:
 	${PINK}${REVERSE}$ github-npm <command...>${RESET}\n
 ${WHITE}See 'github-npm help' for more information${RESET}"
+}
+
+function publishToNPM() {
+	git checkout master
+	npm install
+	npm version ${first}
 }

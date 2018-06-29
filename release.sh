@@ -47,17 +47,17 @@ if [[ " ${COMMANDS[0]} " =~ " ${first} " ]] || [[ " ${COMMANDS[1]} " =~ " ${firs
 	echo -e "$(help)"
 fi
 
-# If user enter verson command
+# Publish verion to npm (major, minor, patch)
 if [[ " ${COMMANDS[2]} " =~ " ${first} " ]] || [[ " ${COMMANDS[3]} " =~ " ${first} " ]] || [[ " ${COMMANDS[4]} " =~ " ${first} " ]]; then
 
 	# TODO
 	case ${first} in
 		${COMMANDS[2]})
-			echo "this is major" ;;
+			$(publishToNPM)
 		${COMMANDS[3]})
-			echo "this is minor " ;;
+			$(publishToNPM)
 		${COMMANDS[4]})
-			echo "this is patch " ;;
+			$(publishToNPM)
 esac
 fi
 
@@ -68,23 +68,7 @@ fi
 
 
 
-# if ([ "$1" != "major" ] && [ "$1" != "minor" ] && [ "$1" != "patch" ])
-#   then
-#     echo "please specify one of (major, minor, patch)"
-#     exit
-# fi
 
-
-# git checkout master
-# git add .
-# git commit -m 'Save all to publish package'
-#
-# npm install
-# npm version $1
-#
-
-
-#
 # echo $PACKAGE_VERSION
 #
 # # Add all
