@@ -4,13 +4,16 @@
 
 # Github - NPM
 
-> Release npm packages on Github
+> Release npm packages on Github never had been easier
+
+![Github-NPM](https://cdn.abraham.gq/projects/github-npm/github-npm.svg)
 
 [![Cash Me][cash-me]](https://cash.me/$19cah)
 [![19cah](https://19cah.com/badge.svg)](https://github.com/19cah)
 [![Build Status](https://img.shields.io/travis/19cah/github-npm.svg?logo=travis)](https://travis-ci.org/19cah/github-npm)
 [![npm](https://img.shields.io/npm/v/github-npm.svg)](https://www.npmjs.com/package/github-npm)
 [![license](https://img.shields.io/github/license/19cah/github-npm.svg)](https://github.com/19cah/github-npm/blob/master/LICENSE)
+
 
 
 # Usage
