@@ -8,7 +8,7 @@
 # Issues: https://github.com/19cah/github-npm/issues
 
 
-source "/release.sh"
+source "../release.sh"
 
 # Args
 arg1=$1
