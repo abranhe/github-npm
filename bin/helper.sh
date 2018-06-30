@@ -100,5 +100,5 @@ function publishToNPM()
 	# npm version ${arg1}
 	# git add .  # package.json and package-lock.json  should change
 
-	echo "worin"
+	echo -e "worincvv"
 }
