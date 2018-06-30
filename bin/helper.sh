@@ -95,10 +95,30 @@ ${WHITE}See 'github-npm help' for more information${RESET}"
 
 function publishToNPM()
 {
-	# git checkout master
-	# npm install
-	# npm version ${arg1}
-	# git add .  # package.json and package-lock.json  should change
+	git checkout master
+	npm install
+	npm version ${arg1}
+	git add .  # package.json and package-lock.json  should change
 
-	echo -e "worincvv"
+	if [ -z "${arg2}" ]; then
+		# Default commit
+		git commit -m "${PACKAGE_VERSION} published"
+	elif [[ "${arg2}" =~ "-m" ]]; then
+		if [ -z "${arg3}" ]; then
+			echo -e "${RED}Must have a commit message${RESET}"
+		else
+			git commit -m "${arg3}"
+		fi
+	fi
+
+	# Publish package
+	npm publish
+
+	# Push commits
+	git push origin master
+
+	# Tag version
+	git tag -a "v$PACKAGE_VERSION" -m  "Welcome to $PACKAGE_VERSION version"
+	git push origin --tags
+
 }
