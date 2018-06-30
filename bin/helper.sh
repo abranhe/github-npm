@@ -7,9 +7,6 @@
 # Easy way to release npm packages on Github
 # Issues: https://github.com/19cah/github-npm/issues
 
-
-source "../release.sh"
-
 # Args
 arg1=$1
 arg2=$2
@@ -103,12 +100,10 @@ function publishToNPM()
 	# npm version ${arg1}
 	# git add .  # package.json and package-lock.json  should change
 
-	if [ ${second} -eq 0 ]
-	then
+	if [ ${second} -eq 0 ]; then
 		# git commit -m "${PACKAGE_VERSION} Published"
 		echo "${PACKAGE_VERSION} Published"
-	elif [[ ${second} = "-m"]]
-	then
+	elif [[ ${second} = "-m"]]; then
 		echo "message"
 	fi
 }
