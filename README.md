@@ -25,11 +25,11 @@ Usage:
 	$ npx github-npm <command...>
 
 Where command is:
-	-h  help          show help
-	<version>         avilable [<major>,<minor>, <patch>]
-	-m  <message>     custom message
-	--tag  <tag>      custom tag value
-	--version         package version
+	-h  help                     show help
+	--version                    view package version
+	<version>                    select between <patch, minor, major>
+	<version> -m message>        add a custom message to commit
+	                             Eg: $ github-npm patch -m "drop new realese"
 ```
 
 ### Versions
