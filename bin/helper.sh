@@ -103,4 +103,5 @@ function publishToNPM()
 	if [ ${second} -eq 0 ]; then
 		# git commit -m "${PACKAGE_VERSION} Published"
 		echo "${PACKAGE_VERSION} Published"
+	fi
 }
