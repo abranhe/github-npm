@@ -100,10 +100,5 @@ function publishToNPM()
 	# npm version ${arg1}
 	# git add .  # package.json and package-lock.json  should change
 
-	# if [ ${arg2} -eq 0 ]; then
-	# 	# git commit -m "${PACKAGE_VERSION} Published"
-	# 	echo "${PACKAGE_VERSION} Published"
-	if [[ ${arg2} = "-m"]]; then
-		echo "message"
-	fi
+	echo "worin"
 }
