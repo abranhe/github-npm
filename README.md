@@ -21,7 +21,15 @@
 # Usage
 
 ```
-$ npx github-npm [version]
+Usage:
+	$ npx github-npm <command...>
+
+Where command is:
+	-h  help          show help
+	<version>         avilable [<major>,<minor>, <patch>]
+	-m  <message>     custom message
+	--tag  <tag>      custom tag value
+	--version         package version
 ```
 
 ### Versions
