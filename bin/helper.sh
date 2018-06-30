@@ -102,7 +102,7 @@ function publishToNPM()
 
 	if [ ${arg2} -eq 0 ]; then
 		# git commit -m "${PACKAGE_VERSION} Published"
-		echo "${PACKAGE_VERSION} Published"
+		echo "\n${PACKAGE_VERSION} Published"
 	elif [[ ${arg2} = "-m"]]; then
 		echo "message"
 	fi
