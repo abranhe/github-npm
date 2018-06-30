@@ -45,10 +45,10 @@ ${PINK}Usage${RESET}:
 	${PINK}${REVERSE}$ npx github-npm <command...>${RESET}
 
 ${PINK}Where${RESET} command is:
-	${GREEN}-h  help                     show help
-	${GREEN}--version                    view package version
-	${GREEN}<version>                    select between <patch, minor, major>
-	${GREEN}<version> -m \"message\"     add a custom message to commit
+	${GREEN}-h  help${RESET}                     show help
+	${GREEN}--version${RESET}                    view package version
+	${GREEN}<version>${RESET}                    select between <patch, minor, major>
+	${GREEN}<version> -m \"message\"${RESET}     add a custom message to commit
 	                             Eg: $ github-npm patch -m "drop new realese"
 "
 }
