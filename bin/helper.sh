@@ -7,6 +7,9 @@
 # Easy way to release npm packages on Github
 # Issues: https://github.com/19cah/github-npm/issues
 
+
+source "/release.sh"
+
 # Args
 arg1=$1
 arg2=$2
