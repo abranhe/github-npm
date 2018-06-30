@@ -32,48 +32,49 @@ COMMANDS=(
 # Non argument statement
 if [ $# -eq 0 ]; then
     echo -e "$(logo)"
-    exit 1
+    exit 0
 fi
 
 # Check for invalid arguments
-if [[ ! " ${COMMANDS[@]} " =~ " ${first} " ]]; then
-    echo -e "${RED}github-npm: '${first}' is not a valid command. ${RESET}" # "$(test ! -z " $all" -a "$all" != " " && echo "\nParameters: $all" || echo "") ${RESET}"
+if [[ ! " ${COMMANDS[@]} " =~ " ${arg1} " ]]; then
+    echo -e "${RED}github-npm: '${arg1}' is not a valid command. ${RESET}" # "$(test ! -z " $all" -a "$all" != " " && echo "\nParameters: $all" || echo "") ${RESET}"
 		echo "See 'github-npm -h' for more information"
 		exit 0
 fi
 
 # When user ask for help
-if [[ " ${COMMANDS[0]} " =~ " ${first} " ]] || [[ " ${COMMANDS[1]} " =~ " ${first} " ]]; then
+if [[ " ${COMMANDS[0]} " =~ " ${arg1} " ]] || [[ " ${COMMANDS[1]} " =~ " ${arg1} " ]]; then
 	echo -e "$(help)"
 fi
 
 # Publish verion to npm (major, minor, patch)
-if [[ " ${COMMANDS[2]} " =~ " ${first} " ]] || [[ " ${COMMANDS[3]} " =~ " ${first} " ]] || [[ " ${COMMANDS[4]} " =~ " ${first} " ]]; then
+if [[ " ${COMMANDS[2]} " =~ " ${arg1} " ]] || [[ " ${COMMANDS[3]} " =~ " ${arg1} " ]] || [[ " ${COMMANDS[4]} " =~ " ${arg1} " ]]; then
 
-	# TODO
-	case ${first} in
+	case ${arg1} in
 		${COMMANDS[2]})
 			$(publishToNPM)
+			;;
 		${COMMANDS[3]})
 			$(publishToNPM)
+			;;
 		${COMMANDS[4]})
 			$(publishToNPM)
+			;;
 esac
 fi
 
 # When user ask for help
-if [[ " ${COMMANDS[7]} " =~ " ${first} " ]]; then
+if [[ " ${COMMANDS[7]} " =~ " ${arg1} " ]]; then
 	echo "$PACKAGE_VERSION"
 fi
 
 
 
 
-# echo $PACKAGE_VERSION
 #
-# # Add all
-# git add .
-# git commit -m "$PACKAGE_VERSION published"
+git add .
+git commit -m "$PACKAGE_VERSION published"
+
 #
 # # Publish package
 # npm publish
