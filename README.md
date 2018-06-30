@@ -43,10 +43,9 @@ Where command is:
 # Api
 
 - Go to master branch
-- Commit changes with message  `Save all to publish package`
 - Publish npm package
-- Commit charges with message `{package name} published`
-- Create a tag and publish it
+- Commit changes with a default message of `{package name} published` or with custom message using `-m "your custom message"`
+- Create a new semantic tag and publish it
 
 # License
 

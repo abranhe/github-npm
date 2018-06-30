@@ -48,7 +48,7 @@ ${PINK}Where${RESET} command is:
 	${GREEN}-h  help${RESET}                     show help
 	${GREEN}--version${RESET}                    view package version
 	${GREEN}<version>${RESET}                    select between <patch, minor, major>
-	${GREEN}<version> -m message>${RESET}        add a custom message to commit
+	${GREEN}<version> -m <message>${RESET}       add a custom message to commit
 	                             Eg: $ github-npm patch -m \"drop new realese\"
 "
 }
