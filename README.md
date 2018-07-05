@@ -47,6 +47,8 @@ Where command is:
 - Commit changes with a default message of `{package name} published` or with custom message using `-m "your custom message"`
 - Create a new semantic tag and publish it
 
+Read more on my [blog](https://blog.19cah.com/2018/06/30/release-npm-packages-on-github).
+
 # License
 
 [MIT](https://github.com/19cah/github-npm/blob/master/LICENSE) License © [Carlos Abraham](https://github.com/19cah)
