@@ -10,9 +10,10 @@
 # Helper
 source "bin/helper.sh"
 
+
 # Check if there are changes to be committed
 if ! $(checkStatus); then
-	echo -e "${RED}Please commit your changes before creating a release${RESET}"
+	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
 	exit 0
 fi
 

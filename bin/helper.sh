@@ -113,6 +113,7 @@ function publishToNPM()
 
 	# Publish package
 	npm publish
+	echo -e "$(message "Publishing package")"
 
 	# Push commits
 	git push origin master
@@ -120,5 +121,14 @@ function publishToNPM()
 	# Tag version
 	git tag -a "v$PACKAGE_VERSION" -m  "Welcome to $PACKAGE_VERSION version"
 	git push origin --tags
+	echo -e "$(message "Creating tags")"
 
+}
+
+function message ()
+{
+	echo "\033[1K"
+	echo -e "
+${GREEN}✔︎ "$@" ${RESET}
+"
 }
