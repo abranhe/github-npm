@@ -20,7 +20,7 @@ fi
 
 # Commands
 COMMANDS=(
-	"help"
+	"--help"
 	"-h"
 	"major"
 	"minor"

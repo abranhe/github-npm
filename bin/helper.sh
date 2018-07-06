@@ -90,7 +90,7 @@ ${PINK}Usage${RESET}:
 	${PINK}${REVERSE}$ npx github-npm <command...>${RESET}\n
 ${PINK}or${RESET}:
 	${PINK}${REVERSE}$ github-npm <command...>${RESET}\n
-${WHITE}See 'github-npm help' for more information${RESET}"
+${WHITE}See 'github-npm --help' for more information${RESET}"
 }
 
 function publishToNPM()
