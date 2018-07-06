@@ -37,66 +37,6 @@ LOGO3="\033[38;5;163m"
 LOGO4="\033[38;5;164m"
 LOGO5="\033[38;5;165m"
 
-
-# Check if there are changes to be committed
-if ! $checkStatus; then
-	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
-	exit 0
-fi
-
-
-# Commands
-COMMANDS=(
-	"--help"
-	"-h"
-	"major"
-	"minor"
-	"patch"
-	"--tag"
-	"-m"
-	"--version"
-)
-
-# Non argument statement
-if [ $# -eq 0 ]; then
-    echo -e "$(logo)"
-    exit 0
-fi
-
-# Check for invalid arguments
-if [[ ! " ${COMMANDS[@]} " =~ " ${arg1} " ]]; then
-    echo -e "${RED}github-npm: '${arg1}' is not a valid command. ${RESET}" # "$(test ! -z " $all" -a "$all" != " " && echo "\nParameters: $all" || echo "") ${RESET}"
-		echo "See 'github-npm -h' for more information"
-		exit 0
-fi
-
-# When user ask for help
-if [[ " ${COMMANDS[0]} " =~ " ${arg1} " ]] || [[ " ${COMMANDS[1]} " =~ " ${arg1} " ]]; then
-	echo -e "$(help)"
-fi
-
-# Publish verion to npm (major, minor, patch)
-if [[ " ${COMMANDS[2]} " =~ " ${arg1} " ]] || [[ " ${COMMANDS[3]} " =~ " ${arg1} " ]] || [[ " ${COMMANDS[4]} " =~ " ${arg1} " ]]; then
-
-	case ${arg1} in
-		${COMMANDS[2]})
-			echo "$(publishToNPM)"
-			;;
-		${COMMANDS[3]})
-			echo "$(publishToNPM)"
-			;;
-		${COMMANDS[4]})
-			echo "$(publishToNPM)"
-			;;
-esac
-fi
-
-# When user ask for help
-if [[ " ${COMMANDS[7]} " =~ " ${arg1} " ]]; then
-	echo "$PACKAGE_VERSION"
-fi
-
-
 # Help Fuction
 function help()
 {
@@ -192,3 +132,61 @@ function message ()
 ${GREEN}✔︎ "$@" ${RESET}
 "
 }
+
+# Check if there are changes to be committed
+if ! $(checkStatus); then
+	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
+	exit 0
+fi
+
+
+# Commands
+COMMANDS=(
+	"--help"
+	"-h"
+	"major"
+	"minor"
+	"patch"
+	"--tag"
+	"-m"
+	"--version"
+)
+
+# Non argument statement
+if [ $# -eq 0 ]; then
+    echo -e "$(logo)"
+    exit 0
+fi
+
+# Check for invalid arguments
+if [[ ! " ${COMMANDS[@]} " =~ " ${arg1} " ]]; then
+    echo -e "${RED}github-npm: '${arg1}' is not a valid command. ${RESET}" # "$(test ! -z " $all" -a "$all" != " " && echo "\nParameters: $all" || echo "") ${RESET}"
+		echo "See 'github-npm -h' for more information"
+		exit 0
+fi
+
+# When user ask for help
+if [[ " ${COMMANDS[0]} " =~ " ${arg1} " ]] || [[ " ${COMMANDS[1]} " =~ " ${arg1} " ]]; then
+	echo -e "$(help)"
+fi
+
+# Publish verion to npm (major, minor, patch)
+if [[ " ${COMMANDS[2]} " =~ " ${arg1} " ]] || [[ " ${COMMANDS[3]} " =~ " ${arg1} " ]] || [[ " ${COMMANDS[4]} " =~ " ${arg1} " ]]; then
+
+	case ${arg1} in
+		${COMMANDS[2]})
+			echo "$(publishToNPM)"
+			;;
+		${COMMANDS[3]})
+			echo "$(publishToNPM)"
+			;;
+		${COMMANDS[4]})
+			echo "$(publishToNPM)"
+			;;
+esac
+fi
+
+# When user ask for help
+if [[ " ${COMMANDS[7]} " =~ " ${arg1} " ]]; then
+	echo "$PACKAGE_VERSION"
+fi
