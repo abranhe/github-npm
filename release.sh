@@ -39,7 +39,7 @@ LOGO5="\033[38;5;165m"
 
 
 # Check if there are changes to be committed
-if ! $(checkStatus); then
+if ! $checkStatus; then
 	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
 	exit 0
 fi
