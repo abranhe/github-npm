@@ -49,6 +49,10 @@ Where command is:
 
 Read more on my [blog](https://blog.19cah.com/2018/06/30/release-npm-packages-on-github).
 
+# Related 
+
+[**gong** ](https://github.com/19cah/gong): Gem on Github: Release gem packages easier on Github.
+
 # License
 
 [MIT](https://github.com/19cah/github-npm/blob/master/LICENSE) License © [Carlos Abraham](https://github.com/19cah)
