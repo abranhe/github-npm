@@ -135,7 +135,7 @@ function publishToNPM()
 	rm -rf 1.log 2.log 3.log 4.log 5.log 6.log
 
 	# Add and push commits
-	git add .# package.json and package-lock.json  should change
+	git add . # package.json and package-lock.json  should change
 	git push origin master &>github-npm.log
 
 	echo -e "$(message "Committed all files to master")"
