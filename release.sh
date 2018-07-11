@@ -121,15 +121,15 @@ function publishToNPM()
 
 	# Publish package
 	saveLog npm publish
-	saveLog echo -e "$(message "Publishing package")"
+	echo -e "$(message "Publishing package")"
 
 	# Push commits
 	saveLog git push origin master
 
 	# Tag version
-	saveLog git tag -a "v${PACKAGE_VERSION}" -m  "Welcome to ${PACKAGE_VERSION version}"
+	saveLog git tag -a "v${PACKAGE_VERSION}" -m  "Welcome to ${PACKAGE_VERSION} version"
 	saveLog git push origin --tags
-	saveLog echo -e "$(message "Creating tags")"
+	echo -e "$(message "Creating tags")"
 
 }
 
@@ -145,11 +145,11 @@ ${GREEN}✔︎ "$@" ${RESET}
 #-------------------------- End of Helper --------------------------------------
 
 
-# # Check if there are changes to be committed
-# if ! $(checkStatus); then
-# 	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
-# 	exit 0
-# fi
+# Check if there are changes to be committed
+if ! $(checkStatus); then
+	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
+	exit 0
+fi
 
 
 # Commands
