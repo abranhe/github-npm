@@ -106,7 +106,6 @@ function publishToNPM()
 	npm install &>2.log
 
 	npm version ${arg1}
-	git add package.json package-lock.json # package.json and package-lock.json  should change
 
 	if [ -z "${arg2}" ]; then
 		# Default commit
@@ -130,13 +129,14 @@ function publishToNPM()
 	git push origin --tags &>5.log
 	echo -e "$(message "Tags Created")"
 
-	# Push commits
-	git push origin master &>6.log
-
 	# Save to 1 file
-	cat 1.log 2.log 3.log 4.log 5.log 6.log >> github-npm.log
+	cat 1.log 2.log 3.log 4.log 5.log >> github-npm.log
 
 	rm -rf 1.log 2.log 3.log 4.log 5.log 6.log
+
+	# Add and push commits
+	git add .# package.json and package-lock.json  should change
+	git push origin master &>github-npm.log
 
 	echo -e "$(message "Committed all files to master")"
 }

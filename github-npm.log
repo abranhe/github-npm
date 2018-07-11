@@ -1,0 +1,34 @@
+Already on 'master'
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+up to date in 0.935s
+found 0 vulnerabilities
+
+npm notice 
+npm notice 📦  github-npm@1.2.17
+npm notice === Tarball Contents === 
+npm notice 607B  package.json  
+npm notice 175B  .editorconfig 
+npm notice 29B   .gitattributes
+npm notice 46B   .travis.yml   
+npm notice 122B  1.log         
+npm notice 46B   2.log         
+npm notice 0     3.log         
+npm notice 1.1kB LICENSE       
+npm notice 2.0kB README.md     
+npm notice 6.0kB release.sh    
+npm notice === Tarball Details === 
+npm notice name:          github-npm                              
+npm notice version:       1.2.17                                  
+npm notice package size:  4.0 kB                                  
+npm notice unpacked size: 10.2 kB                                 
+npm notice shasum:        419bcd1906a1d44dc44fc0577d8da2f9ef8eabf1
+npm notice integrity:     sha512-SVY4XIvlo6jaS[...]zRlkZH7Bu3IRA==
+npm notice total files:   10                                      
+npm notice 
++ github-npm@1.2.17
+fatal: Failed to resolve '1.2.16' as a valid ref.
+To https://github.com/19cah/github-npm.git
+ * [new tag]         v1.2.17 -> v1.2.17
+To https://github.com/19cah/github-npm.git
+   f2e7383..6a24987  master -> master
