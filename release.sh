@@ -118,8 +118,10 @@ function publishToNPM()
 	npm publish &>3.log
 	echo -e "$(message "Publishing package")"
 
+	versionTag=v$PACKAGE_VERSION
+
 	# Tag version
-	git tag -a "v$PACKAGE_VERSION" -m  "Welcome to ${PACKAGE_VERSION} version"
+	git tag versionTag -m  "Welcome to ${PACKAGE_VERSION} version"
 	git push origin --tags &>4.log
 	echo -e "$(message "Creating tags")"
 
