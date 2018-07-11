@@ -71,6 +71,11 @@ function checkStatus() {
 	fi
 }
 
+function message ()
+{
+	# echo "\033[1K"
+	echo -e "${GREEN}✔︎ "$@" ${RESET}"
+}
 
 # GITHUB-NPM
 function logo()
@@ -116,14 +121,14 @@ function publishToNPM()
 
 	# Publish package
 	npm publish &>3.log
-	echo -e "$(message "Publishing package")"
+	echo -e "$(message "Package published")"
 
 	versionTag=v$PACKAGE_VERSION
 
 	# Tag version
-	git tag -a versionTag -m  "Welcome to ${PACKAGE_VERSION} version" &>4.log
+	git tag -a $versionTag -m  "Welcome to ${PACKAGE_VERSION} version" &>4.log
 	git push origin --tags &>5.log
-	echo -e "$(message "Creating tags")"
+	echo -e "$(message "Tags Created")"
 
 	# Push commits
 	git push origin master &>6.log
@@ -132,16 +137,10 @@ function publishToNPM()
 	cat 1.log 2.log 3.log 4.log 5.log 6.log >> github-npm.log
 
 	rm -rf 1.log 2.log 3.log 4.log 5.log 6.log
+
+	echo -e "$(message "Committed all files to master")"
 }
 
-
-function message ()
-{
-	echo "\033[1K"
-	echo -e "
-${GREEN}✔︎ "$@" ${RESET}
-"
-}
 
 #-------------------------- End of Helper --------------------------------------
 
