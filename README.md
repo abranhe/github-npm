@@ -23,24 +23,21 @@
 # Usage
 
 ```
-Usage:
-	$ npx github-npm <command...>
+Usage
+	$ npx github-npm <version...>
 
-Where command is:
-	-h  help                     show help
-	--version                    view package version
-	<version>                    select between <patch, minor, major>
-	<version> -m message>        add a custom message to commit
-	                             Eg: $ github-npm patch -m "drop new realese"
+Where version can be:
+  patch | minor | major
+
+Options
+	-h, --help           Show help
+	    --version        View package version
+	-m, --message        Add a custom message to commit
+
+Eg:
+  $ github-npm patch -m "drop new realese"
 ```
 
-### Versions
-
-| Version |                        | Eg:                  |
-| ------- | ---------------------- | -------------------- |
-| major   | `vX.Y.Z` ~> `vX+1.Y.Z` | `v0.0.0` ~> `v1.0.0` |
-| minor   | `vX.Y.Z` ~> `vX.Y+1.Z` | `v0.0.0` ~> `v0.1.0` |
-| patch   | `vX.Y.Z` ~> `vX.Y.Z+1` | `v0.0.0` ~> `v0.0.1` |
 
 # Api
 
@@ -54,10 +51,10 @@ Read more on my [blog](https://blog.19cah.com/2018/06/30/release-npm-packages-on
 # Author
 
 |[![Carlos Abraham Logo](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://19cah.com)|
-| - |
+| :-: |
 | [Carlos Abraham](https://github.com/19cah) |
 
-# Related 
+# Related
 
 [**gong** ](https://github.com/19cah/gong): Gem on Github: Release gem packages easier on Github.
 
