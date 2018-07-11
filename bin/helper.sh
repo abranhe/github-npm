@@ -118,7 +118,7 @@ function publishToNPM()
 	git push origin master
 
 	# Tag version
-	git tag -a "v$PACKAGE_VERSION" -m  "Welcome to $PACKAGE_VERSION version"
+	git tag -a "v${PACKAGE_VERSION}" -m  "Welcome to ${PACKAGE_VERSION version}"
 	git push origin --tags
 	echo -e "$(message "Creating tags")"
 
