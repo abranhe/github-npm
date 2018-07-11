@@ -12,7 +12,7 @@
 arg1=$1
 arg2=$2
 arg3=$3
-all=${@:2}
+all=${@}
 
 # Colors
 RESET="\033[0m"
@@ -71,6 +71,12 @@ function checkStatus() {
 	fi
 }
 
+# Save log
+function saveLog()
+{
+	${@}>>log
+}
+
 # GITHUB-NPM
 function logo()
 {
@@ -95,35 +101,38 @@ ${WHITE}See 'github-npm --help' for more information${RESET}"
 
 function publishToNPM()
 {
-	git checkout master
-	npm install
-	npm version ${arg1}
-	git add .  # package.json and package-lock.json  should change
+	saveLog git checkout master
+
+	saveLog npm install
+
+	saveLog npm version ${arg1}
+	saveLog git add package.json package-lock.json # package.json and package-lock.json  should change
 
 	if [ -z "${arg2}" ]; then
 		# Default commit
-		git commit -m "${PACKAGE_VERSION} published"
+		saveLog git commit -m "${PACKAGE_VERSION} published"
 	elif [[ "${arg2}" =~ "-m" ]]; then
 		if [ -z "${arg3}" ]; then
 			echo -e "${RED}Must have a commit message${RESET}"
 		else
-			git commit -m "${arg3}"
+			saveLog git commit -m "${arg3}"
 		fi
 	fi
 
 	# Publish package
-	npm publish
-	echo -e "$(message "Publishing package")"
+	saveLog npm publish
+	saveLog echo -e "$(message "Publishing package")"
 
 	# Push commits
-	git push origin master
+	saveLog git push origin master
 
 	# Tag version
-	git tag -a "v${PACKAGE_VERSION}" -m  "Welcome to ${PACKAGE_VERSION version}"
-	git push origin --tags
-	echo -e "$(message "Creating tags")"
+	saveLog git tag -a "v${PACKAGE_VERSION}" -m  "Welcome to ${PACKAGE_VERSION version}"
+	saveLog git push origin --tags
+	saveLog echo -e "$(message "Creating tags")"
 
 }
+
 
 function message ()
 {
@@ -136,11 +145,11 @@ ${GREEN}✔︎ "$@" ${RESET}
 #-------------------------- End of Helper --------------------------------------
 
 
-# Check if there are changes to be committed
-if ! $(checkStatus); then
-	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
-	exit 0
-fi
+# # Check if there are changes to be committed
+# if ! $(checkStatus); then
+# 	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
+# 	exit 0
+# fi
 
 
 # Commands
