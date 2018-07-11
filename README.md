@@ -43,7 +43,7 @@ Eg:
 
 - Go to master branch
 - Publish npm package
-- Commit changes with a default message of `{package name} published` or with custom message using `-m "your custom message"`
+- Commit changes with a default message of `package version published` or with custom message using `-m "your custom message"`
 - Create a new semantic tag and publish it
 
 Read more on my [blog](https://blog.19cah.com/2018/06/30/release-npm-packages-on-github).
