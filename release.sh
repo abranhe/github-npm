@@ -101,7 +101,7 @@ function publishToNPM()
 	npm install &>2.log
 
 	npm version ${arg1}
-	git add # package.json package-lock.json # package.json and package-lock.json  should change
+	git add .# package.json package-lock.json # package.json and package-lock.json  should change
 
 	if [ -z "${arg2}" ]; then
 		# Default commit
