@@ -71,11 +71,6 @@ function checkStatus() {
 	fi
 }
 
-# Save log
-function saveLog()
-{
-	${@}>>log
-}
 
 # GITHUB-NPM
 function logo()
@@ -101,34 +96,34 @@ ${WHITE}See 'github-npm --help' for more information${RESET}"
 
 function publishToNPM()
 {
-	saveLog git checkout master
+	git checkout master &>1.log
 
-	saveLog npm install
+	npm install &>2.log
 
-	saveLog npm version ${arg1}
-	saveLog git add package.json package-lock.json # package.json and package-lock.json  should change
+	npm version ${arg1}
+	git add package.json package-lock.json # package.json and package-lock.json  should change
 
 	if [ -z "${arg2}" ]; then
 		# Default commit
-		saveLog git commit -m "${PACKAGE_VERSION} published"
+		git commit -m "${PACKAGE_VERSION} published"
 	elif [[ "${arg2}" =~ "-m" ]]; then
 		if [ -z "${arg3}" ]; then
 			echo -e "${RED}Must have a commit message${RESET}"
 		else
-			saveLog git commit -m "${arg3}"
+			git commit -m "${arg3}"
 		fi
 	fi
 
 	# Publish package
-	saveLog npm publish
+	npm publish &>3.log
 	echo -e "$(message "Publishing package")"
 
 	# Push commits
-	saveLog git push origin master
+	git push origin master &>4.log
 
 	# Tag version
-	saveLog git tag -a "v${PACKAGE_VERSION}" -m  "Welcome to ${PACKAGE_VERSION} version"
-	saveLog git push origin --tags
+	git tag -a "v${PACKAGE_VERSION}" -m  "Welcome to ${PACKAGE_VERSION} version"
+	git push origin --tags &>5.log
 	echo -e "$(message "Creating tags")"
 
 }
