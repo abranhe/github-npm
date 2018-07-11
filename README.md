@@ -1,12 +1,14 @@
-[![Carlos Abraham Logo](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://19cah.com)
+<p align="center">
+  	<img src="https://cdn.abraham.gq/projects/github-npm/logo.svg" width="300px">
+</p>
 
-[![NPM](https://nodei.co/npm/github-npm.png?compact=true)](https://nodei.co/npm/github-npm/)
+<h1 align="center">github - npm</h1>
 
-# Github - NPM
+<p align="center">
+  	<a href="https://npmjs.org/github-npm"><img src="https://nodei.co/npm/github-npm.png?compact=true" width="300px"></a>
+</p>
 
 > Release npm packages on Github never had been easier
-
-![Github-NPM](https://cdn.abraham.gq/projects/github-npm/github-npm.svg)
 
 <!-- Badges -->
 [![Patreon][patreon]](https://www.patreon.com/19cah)
@@ -48,6 +50,12 @@ Where command is:
 - Create a new semantic tag and publish it
 
 Read more on my [blog](https://blog.19cah.com/2018/06/30/release-npm-packages-on-github).
+
+# Author
+
+|[![Carlos Abraham Logo](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://19cah.com)|
+| - |
+| [Carlos Abraham](https://github.com/19cah) |
 
 # Related 
 
