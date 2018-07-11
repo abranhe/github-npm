@@ -121,17 +121,17 @@ function publishToNPM()
 	versionTag=v$PACKAGE_VERSION
 
 	# Tag version
-	git tag versionTag -m  "Welcome to ${PACKAGE_VERSION} version"
-	git push origin --tags &>4.log
+	git tag -a versionTag -m  "Welcome to ${PACKAGE_VERSION} version" &>4.log
+	git push origin --tags &>5.log
 	echo -e "$(message "Creating tags")"
 
 	# Push commits
-	git push origin master &>5.log
+	git push origin master &>6.log
 
 	# Save to 1 file
-	cat 1.log 2.log 3.log 4.log 5.log >> github-npm.log
+	cat 1.log 2.log 3.log 4.log 5.log 6.log >> github-npm.log
 
-	rm -rf 1.log 2.log 3.log 4.log 5.log
+	rm -rf 1.log 2.log 3.log 4.log 5.log 6.log
 }
 
 
