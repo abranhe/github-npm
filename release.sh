@@ -118,14 +118,18 @@ function publishToNPM()
 	npm publish &>3.log
 	echo -e "$(message "Publishing package")"
 
-	# Push commits
-	git push origin master &>4.log
-
 	# Tag version
 	git tag -a "v${PACKAGE_VERSION}" -m  "Welcome to ${PACKAGE_VERSION} version"
-	git push origin --tags &>5.log
+	git push origin --tags &>4.log
 	echo -e "$(message "Creating tags")"
 
+	# Save to 1 file
+	cat 1.log 2.log 3.log 4.log 5.log >> github-npm.log
+
+	rm -rf 1.log 2.log 3.log 4.log 5.log
+
+	# Push commits
+	git push origin master &>5.log
 }
 
 
