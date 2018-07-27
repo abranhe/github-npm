@@ -11,12 +11,12 @@
 > Release npm packages on Github never had been easier
 
 <!-- Badges -->
-[![Patreon][patreon]](https://www.patreon.com/19cah)
-[![Cash Me][cash-me]](https://cash.me/$19cah)
-[![19cah](https://19cah.com/badge.svg)](https://github.com/19cah)
-[![Build Status](https://img.shields.io/travis/19cah/github-npm.svg?logo=travis)](https://travis-ci.org/19cah/github-npm)
+[![Patreon][patreon]](https://www.patreon.com/abranhe)
+[![Cash Me][cash-me]](https://cash.me/$abranhe)
+[![abranhe](https://abranhe.com/badge.svg)](https://github.com/abranhe)
+[![Build Status](https://img.shields.io/travis/abranhe/github-npm.svg?logo=travis)](https://travis-ci.org/abranhe/github-npm)
 [![npm](https://img.shields.io/npm/v/github-npm.svg)](https://www.npmjs.com/package/github-npm)
-[![license](https://img.shields.io/github/license/19cah/github-npm.svg)](https://github.com/19cah/github-npm/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/abranhe/github-npm.svg)](https://github.com/abranhe/github-npm/blob/master/LICENSE)
 <!-- Badges -->
 
 
@@ -46,21 +46,21 @@ Eg:
 - Commit changes with a default message of `package version published` or with custom message using `-m "your custom message"`
 - Create a new semantic tag and publish it
 
-Read more on my [blog](https://blog.19cah.com/2018/06/30/release-npm-packages-on-github).
+Read more on my [blog](https://blog.abranhe.com/2018/06/30/release-npm-packages-on-github).
 
 # Author
 
-|[![Carlos Abraham Logo](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://19cah.com)|
+|[![Carlos Abraham Logo](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://abranhe.com)|
 | :-: |
-| [Carlos Abraham](https://github.com/19cah) |
+| [Carlos Abraham](https://github.com/abranhe) |
 
 # Related
 
-[**gong** ](https://github.com/19cah/gong): Gem on Github: Release gem packages easier on Github.
+[**gong** ](https://github.com/abranhe/gong): Gem on Github: Release gem packages easier on Github.
 
 # License
 
-[MIT](https://github.com/19cah/github-npm/blob/master/LICENSE) License © [Carlos Abraham](https://github.com/19cah)
+[MIT](https://github.com/abranhe/github-npm/blob/master/LICENSE) License © [Carlos Abraham](https://github.com/abranhe)
 
 
 [cash-me]: https://cdn.abraham.gq/badges/cash-me.svg
