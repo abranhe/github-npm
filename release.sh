@@ -80,7 +80,7 @@ function message ()
 # GITHUB-NPM
 function logo()
 {
-	echo "${LOGO5}          \$\$\   \$\$\     \$\$\                 \$\$\                                                                                                 ${RESET}"
+	echo "${LOGO5}          \$\$\\   \$\$\     \$\$\                 \$\$\                                                                                                ${RESET}"
 	echo "${LOGO4}          \__|  \$\$ |    \$\$ |                \$\$ |                                                                                                  ${RESET}"
 	echo "${LOGO4} \$\$\$\$\$\$\  \$\$\ \$\$\$\$\$\$\   \$\$\$\$\$\$\$\  \$\$\   \$\$\ \$\$\$\$\$\$\$\          \$\$\$\$\$\$\$\   \$\$\$\$\$\$\  \$\$\$\$\$\$\\\$\$\$\$\  ${RESET}"
 	echo "${LOGO3}\$\$  __\$\$\ \$\$ |\_\$\$  _|  \$\$  __\$\$\ \$\$ |  \$\$ |\$\$  __\$\$\ \$\$\$\$\$\$\ \$\$  __\$\$\ \$\$  __\$\$\ \$\$  _\$\$  _\$\$\                 ${RESET}"
@@ -145,11 +145,11 @@ function publishToNPM()
 #-------------------------- End of Helper --------------------------------------
 
 
-# Check if there are changes to be committed
-if ! $(checkStatus); then
-	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
-	exit 0
-fi
+# # Check if there are changes to be committed
+# if ! $(checkStatus); then
+# 	echo -e "${RED}✖︎ Please commit your changes before creating a release${RESET}"
+# 	exit 0
+# fi
 
 
 # Commands
