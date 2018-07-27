@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/19cah/github-npm.git"
+    "url": "https://github.com/abranhe/github-npm.git"
   },
   "keywords": [
     "realease",
@@ -21,7 +21,7 @@
   "author": "Carlos Abraham",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/19cah/github-npm/issues"
+    "url": "https://github.com/abranhe/github-npm/issues"
   },
-  "homepage": "https://github.com/19cah/github-npm#readme"
+  "homepage": "https://github.com/abranhe/github-npm#readme"
 }
