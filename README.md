@@ -50,7 +50,7 @@ Read more on my [blog](https://blog.abranhe.com/2018/06/30/release-npm-packages-
 
 # Author
 
-|[![Carlos Abraham Logo](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://abranhe.com)|
+|[![Carlos Abraham Logo](https://avatars3.githubusercontent.com/u/21347264?s=50&v=4)](https://abranhe.com) [![Greenkeeper badge](https://badges.greenkeeper.io/abranhe/github-npm.svg)](https://greenkeeper.io/)|
 | :-: |
 | [Carlos Abraham](https://github.com/abranhe) |
 
