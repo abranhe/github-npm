@@ -23,19 +23,18 @@
 # Usage
 
 ```
-Usage
-	$ npx github-npm <version...>
+Usage:
+	$ npx github-npm <command...>
 
 Where version can be:
-  patch | minor | major
+	patch | minor | major
 
-Options
-	-h, --help           Show help
-	    --version        View package version
-	-m, --message        Add a custom message to commit
-
-Eg:
-  $ github-npm patch -m "drop new realese"
+Options:
+	-h  --help                   Show help and exit
+	--version                    View package version
+	<version>                    Select between <patch, minor, major>
+	<version> -m <message>       Add a custom message to commit
+	                             Eg: $ github-npm patch -m "drop new realese"
 ```
 
 

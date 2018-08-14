@@ -5,7 +5,7 @@
 # release.sh
 #
 # Easy way to release npm packages on Github
-# Issues: https://github.com/19cah/github-npm/issues
+# Issues: https://github.com/abranhe/github-npm/issues
 
 #----------------------------- Helper ------------------------------------------
 # Args
@@ -44,11 +44,15 @@ function help()
 	echo -e "
 ${PINK}Usage${RESET}:
 	${PINK}${REVERSE}$ npx github-npm <command...>${RESET}
-${PINK}Where${RESET} command is:
-	${GREEN}-h  help${RESET}                     show help
-	${GREEN}--version${RESET}                    view package version
-	${GREEN}<version>${RESET}                    select between <patch, minor, major>
-	${GREEN}<version> -m <message>${RESET}       add a custom message to commit
+
+${PINK}Where${RESET} version can be:
+	patch | minor | major
+
+${PINK}Options${RESET}:
+	${GREEN}-h  --help${RESET}                   Show help and exit
+	${GREEN}--version${RESET}                    View package version
+	${GREEN}<version>${RESET}                    Select between <patch, minor, major>
+	${GREEN}<version> -m <message>${RESET}       Add a custom message to commit
 	                             Eg: $ github-npm patch -m \"drop new realese\"
 "
 }
@@ -129,14 +133,11 @@ function publishToNPM()
 	git push origin --tags &>5.log
 	echo -e "$(message "Tags Created")"
 
-	# Save to 1 file
-	cat 1.log 2.log 3.log 4.log 5.log >> github-npm.log
-
 	rm -rf 1.log 2.log 3.log 4.log 5.log 6.log
 
 	# Add and push commits
 	git add . # package.json and package-lock.json  should change
-	git push origin master &>github-npm.log
+	git push origin master
 
 	echo -e "$(message "Committed all files to master")"
 }
