@@ -2,3 +2,6 @@ language: bash
 
 script:
     - bash release.sh
+
+notifications:
+  email: false
