@@ -1,5 +1,5 @@
 <p align="center">
-  	<img src="https://cdn.abraham.gq/projects/github-npm/logo.svg" width="300px">
+  	<img src="https://cdn.abranhe.com/projects/github-npm/logo.svg" width="300px">
 </p>
 
 <h1 align="center">github - npm</h1>
@@ -62,5 +62,5 @@ Read more on my [blog](https://blog.abranhe.com/2018/06/30/release-npm-packages-
 [MIT](https://github.com/abranhe/github-npm/blob/master/LICENSE) License © [Carlos Abraham](https://github.com/abranhe)
 
 
-[cash-me]: https://cdn.abraham.gq/badges/cash-me.svg
-[patreon]: https://cdn.abraham.gq/badges/patreon.svg
+[cash-me]: https://cdn.abranhe.com/badges/cash-me.svg
+[patreon]: https://cdn.abranhe.com/badges/patreon.svg
