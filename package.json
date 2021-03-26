@@ -1,27 +1,30 @@
 {
-  "name": "github-npm",
-  "version": "1.3.0",
-  "description": "Release npm packages on Github",
-  "main": "release.sh",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/abranhe/github-npm.git"
-  },
-  "keywords": [
-    "realease",
-    "npm-publish",
-    "github-release"
-  ],
-  "bin": {
-    "github-npm": "./release.sh"
-  },
-  "author": "Carlos Abraham",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/abranhe/github-npm/issues"
-  },
-  "homepage": "https://github.com/abranhe/github-npm#readme"
+	"name": "github-npm",
+	"version": "1.3.0",
+	"description": "Publish and release NPM packages on Github",
+	"main": "release.sh",
+	"license": "MIT",
+	"bin": {
+		"github-npm": "release.sh"
+	},
+	"scripts": {
+		"lint": "shellcheck release.sh"
+	},
+	"keywords": [
+		"npm",
+		"github",
+		"release",
+		"npm-publish",
+		"npm-release",
+		"github-release"
+	],
+	"repository": "abranhe/github-npm",
+	"author": {
+		"name": "Abraham Hernandez",
+		"email": "abraham@abranhe.com",
+		"url": "https://abranhe.com"
+	},
+	"devDependencies": {
+		"shellcheck": "^1.0.0"
+	}
 }
