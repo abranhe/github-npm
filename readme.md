@@ -29,11 +29,11 @@ Where command can be one of:
 	major - version when you make incompatible API changes
 
 Options:
-	 -h  --help           Show this help and exit"
-	 -m  --message        Release message"
-	 -v  --version        View package version"
-	 -p  --path           Path to package.json"
-	 -b  --branch         Branch to release"
+	 -h  --help           Show this help and exit
+	 -m  --message        Release message
+	 -v  --version        View package version
+	 -p  --path           Path to package.json
+	 -b  --branch         Branch to release
 ```
 
 Read more about [Semantic Versioning](https://semver.org/).

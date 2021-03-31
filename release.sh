@@ -23,7 +23,7 @@ function help() {
 	echo "Where command can be one of:"
 	echo
 	echo "  patch - version when you make backwards compatible bug fixes"
-	echo "  minor - version when you add functionality in a backwards compatible manner,"
+	echo "  minor - version when you add functionality in a backwards compatible manner"
 	echo "  major - version when you make incompatible API changes"
 	echo
 	echo "Options:"
